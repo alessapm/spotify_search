@@ -15,8 +15,10 @@ const searchSpotify = function(name, type){
   })
   .then((data) => {
     // console.log('hello');
-    console.log(data)
-    $('#search-results').html(searchTemplate(data.artists.items))
+    console.log(data);
+    $('#search-results').html(searchTemplate(data));
+
+
   })
   .catch(err => console.log('error!'));
 }

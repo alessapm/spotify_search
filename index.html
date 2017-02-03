@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript"  src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
   <script src='js/main.js'></script>
 </head>
@@ -29,13 +29,13 @@
   </main>
 <!-- Below: handlebars templates-->
 <script type='text/x-handlebars-template' id='results-template'>
-  {{#each Search}}
+  {{#each artists.items}}
     <div class='result'>
       <h2>{{name}}</h2>
-      <img src={{images[0].url}} alt='image of artist'>
-      <p>{{genres[0]}}</p>
+      <!-- <img src={{images[0].url}} alt='image of artist'>
+      <p>{{genres}}</p>
       <br>
-      <button class='more-info' spotify-id={{id}}>More Info</button>
+      <button class='more-info' spotify-id={{id}}>More Info</button> -->
     </div>
   {{/each}}
 </script>
