@@ -1,4 +1,4 @@
-![Left Shark](http://i.giphy.com/aUs3EKOdlovgQ.gif)
+![Left Shark](https://i.giphy.com/aUs3EKOdlovgQ.gif)
 
 # Spotify List
 
