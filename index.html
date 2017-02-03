@@ -11,14 +11,40 @@
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
   <script src='js/main.js'></script>
 </head>
+
+
 <body>
   <main>
       <div id="search-container">
-        <input type="text" placeholder="Search for a movie">
+        <h1>Search Spotify</h1>
+        <input type="text" placeholder="Search Spotify" id='user-input'>
+        <select id='search-mode'>
+          <option value='artist'>Artist</option>
+          <option value='track'>Song Name</option>
+          <option value='album'>Album</option>
+        </select>
       </div>
       <div id='search-results'></div>
-      <div id='info-modal'></div>
+      <div id='details-overlay'></div>
   </main>
+<!-- Below: handlebars templates-->
+<script type='text/x-handlebars-template' id='results-template'>
+  {{#each Search}}
+    <div class='result'>
+      <h2>{{name}}</h2>
+      <img src={{images[0].url}} alt='image of artist'>
+      <p>{{genres[0]}}</p>
+      <br>
+      <button class='more-info' spotify-id={{id}}>More Info</button>
+    </div>
+  {{/each}}
+</script>
 
 </body>
 </html>
+
+
+<!-- data.artists.items.name -->
+<!-- search?q=${userInput}&type=${dropdownSelection} -->
+
+
