@@ -38,6 +38,24 @@
       <button class='more-info' spotify-id={{id}}>More Info</button> -->
     </div>
   {{/each}}
+  {{#each albums.items}}
+    <div class='result'>
+      <h2>{{name}}</h2>
+      <!-- <img src={{images[0].url}} alt='image of artist'>
+      <p>{{genres}}</p>
+      <br>
+      <button class='more-info' spotify-id={{id}}>More Info</button> -->
+    </div>
+  {{/each}}
+  {{#each tracks.items}}
+    <div class='result'>
+      <h2>{{name}}</h2>
+      <!-- <img src={{images[0].url}} alt='image of artist'>
+      <p>{{genres}}</p>
+      <br>
+      <button class='more-info' spotify-id={{id}}>More Info</button> -->
+    </div>
+  {{/each}}
 </script>
 
 </body>
