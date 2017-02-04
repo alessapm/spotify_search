@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
   <script src='js/main.js'></script>
+  <!-- <script src='../../../../Downloads/andres-spotify/js/app.js'></script> -->
 </head>
 
 
@@ -29,7 +30,7 @@
   </main>
 <!-- Below: handlebars templates-->
 <script type='text/x-handlebars-template' id='results-template'>
-  {{#each artists.items}}
+  {{#each artists.items.0.name}}
     <div class='result'>
       <h2>{{name}}</h2>
       <!-- <img src={{images[0].url}} alt='image of artist'>
@@ -40,7 +41,7 @@
   {{/each}}
   {{#each albums.items}}
     <div class='result'>
-      <h2>{{name}}</h2>
+      <h2>{{album}}</h2>
       <!-- <img src={{images[0].url}} alt='image of artist'>
       <p>{{genres}}</p>
       <br>
@@ -49,7 +50,7 @@
   {{/each}}
   {{#each tracks.items}}
     <div class='result'>
-      <h2>{{name}}</h2>
+      <h2>{{track}}</h2>
       <!-- <img src={{images[0].url}} alt='image of artist'>
       <p>{{genres}}</p>
       <br>
@@ -62,7 +63,7 @@
 </html>
 
 
-<!-- data.artists.items.name -->
+<!-- use this later: data.artists.items.name -->
 <!-- search?q=${userInput}&type=${dropdownSelection} -->
 
 
