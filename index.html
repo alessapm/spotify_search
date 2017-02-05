@@ -5,6 +5,7 @@
     <title>Search Spotify by Alessa</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
@@ -14,8 +15,15 @@
     <div id="search-container">
       <header>
         <h1>Search Spotify</h1>
+        <div id='circles'>
+          <div id='redpurple' class='circ'></div>
+          <div id='periwinkle' class='circ'></div>
+          <div id='softgreen' class='circ'></div>
+          <div id='lightteal' class='circ'></div>
+        </div>
+        <br>
         <div id="search-form">
-          <input type="text" placeholder="Search Spotify" id="user-input">
+          <input type="text" placeholder="Enter Search" id="user-input">
           <select id="search-mode">
             <option value="Artist">Artist</option>
             <option value="Track">Song</option>
@@ -32,6 +40,14 @@
       {{#each artists.items}}
         <div id="result">
           <h2>{{name}}</h2>
+          <p> genres: {{genres}}</p>
+          <img src='{{images.0.url}}'><br>
+          <button class='more-info'>More Info</button>
+        </div>
+      {{/each}}
+      {{#each tracks.items}}
+        <div id="result">
+          <h2>{{track}}</h2>
           <button class='more-info'>More Info</button>
         </div>
       {{/each}}
