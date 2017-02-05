@@ -100,13 +100,13 @@ button {
   left: 150px;
   height: 500px;
   width: 800px;
-  color: white;
-  background-color: rgba(2,10,2,.95);
+  color: black;
+  background-color: rgba(240,240,240,.95);
   border: 2px rgba(37,214,57,1) solid;
+  border-radius: 3px;
 }
 
 #details-overlay p {
-  color: white;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -118,4 +118,7 @@ button {
   border: none;
 }
 
+span{
+  font-size: .8em;
+}
 
