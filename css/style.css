@@ -49,6 +49,9 @@ button {
   border: 2px rgba(37,214,57,.8) outset;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
 }
 
 #result {
@@ -89,3 +92,30 @@ button {
 #search-form {
   padding-bottom: 20px;
 }
+
+#details-overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 50px;
+  left: 150px;
+  height: 500px;
+  width: 800px;
+  color: white;
+  background-color: rgba(2,10,2,.95);
+  border: 2px rgba(37,214,57,1) solid;
+}
+
+#details-overlay p {
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#details-overlay img {
+  height: 200px;
+  width: 150px;
+  box-shadow: 0 0 0 black;
+  border: none;
+}
+
+
