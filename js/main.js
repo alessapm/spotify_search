@@ -9,11 +9,12 @@ $(document).ready(() => {
   const details = $('#more-info').html();
   const overlayTemplate = Handlebars.compile(details);
 
-  let dropdownSelection = $('#search-mode').val();
+
 
   //console.log(searchResults);
 
   const searchSpotify = function(name,type) {
+    let dropdownSelection = $('#search-mode').val();
     $.ajax({
       url: `https://api.spotify.com/v1/search?q=${name}&type=${dropdownSelection}`,
       type: 'GET',

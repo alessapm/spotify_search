@@ -48,14 +48,17 @@
       {{/each}}
       {{#each tracks.items}}
         <div id="result">
-          <h2>{{track}}</h2>
+          <h2>{{name}}</h2>
+          <img src='{{album.images.0.url}}'>
+          <br>
           <button class='more-info'>More Info</button>
         </div>
       {{/each}}
       {{#each albums.items}}
         <div id="result">
-          <h2>{{album}}</h2>
-          <button class='more-info'>More Info</button>
+          <h2>{{name}}</h2>
+          <p>{{artists.name}}</p><br>
+          <button class='more-info' id={{artists.id}}>More Info</button>
         </div>
       {{/each}}
     </script>
