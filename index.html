@@ -51,23 +51,23 @@
           <h2>{{name}}</h2>
           <img src='{{album.images.0.url}}'>
           <br>
-          <button class='more-info'>More Info</button>
+          <!-- <button class='more-info' id={{tracks.items.artists.0.id}}>More Info</button> -->
         </div>
       {{/each}}
       {{#each albums.items}}
         <div id="result">
           <h2>{{name}}</h2>
           <p>{{artists.name}}</p><br>
-          <button class='more-info' id={{artists.id}}>More Info</button>
+          <!-- <button class='more-info' id={{artists.id}}>More Info</button> -->
         </div>
       {{/each}}
     </script>
 
     <script type="text/x-handlebars-template" id="more-info">
       <div id='more'>
-        <h2>{{name}}</h2>
-        <img src='{{images.1.url}}'><br>
-        <p>genres: {{genres}}<br><br>
+        <h2>{{items.0.artists.0.name}}</h2>
+        <img src='{{items.0.images.0.url}}'><br>
+        <p>{{items.0.name}}<br><br>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam blandit, auctor massa id, ornare leo. Nunc ex sem, sollicitudin non sem sed, blandit accumsan ex. Praesent a pellentesque eros. Pellentesque ullamcorper massa ac rutrum efficitur. Quisque eget ante a enim tempor condimentum in vel nunc. In id nisi eget ipsum volutpat ultrices sed quis sem. Vivamus in rhoncus sem. Suspendisse laoreet lacinia ante quis suscipit. Aliquam tincidunt sem quis ante lobortis, vel pretium quam tempus. Sed nec dui felis.
           Aenean feugiat porttitor neque vitae varius. Sed at ipsum libero.<br><br>
           <span>(click anywhere to close)</span>

@@ -32,7 +32,7 @@ $(document).ready(() => {
     let buttonID = $(id).attr('id');
 
     $.ajax({
-      url: `https://api.spotify.com/v1/artists/${buttonID}`,
+      url: `https://api.spotify.com/v1/artists/${buttonID}/albums`,
       type: 'GET',
       dataType: 'json'
     })
